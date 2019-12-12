@@ -4,7 +4,12 @@ export const cuidFn = cuid;
 export default function manageRestaurants(state = { restaurants: [] }, action) {
   switch (action.type) {
     case "ADD_RESTAURANT":
-      console.log(action.type);
-      return { restaurants: state.restaurants.concat(action.payload) };
+      const restaurant = { text: action.payload, id: cuidFn() };
+      return {
+        ...state,
+        restaurants: [...state.restaurants, restaurant]
+      };
+    default:
+      return state;
   }
 }

@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 class RestaurantsContainer extends Component {
   render() {
-    console.log(this.state);
+    console.log(this.props.restaurants);
     return (
       <div>
         <RestaurantInput addRestaurant={this.props.addRestaurant} />
