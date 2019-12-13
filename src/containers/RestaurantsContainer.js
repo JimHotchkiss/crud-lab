@@ -23,7 +23,7 @@ const mapDispatchToState = dispatch => {
   return {
     addRestaurant: userInput =>
       dispatch({ type: "ADD_RESTAURANT", payload: userInput }),
-    deleteRestaurant: id => dispatch({ type: "DELETE_RESTAURANT", payload: id })
+    deleteRestaurant: id => dispatch({ type: "DELETE_RESTAURANT", id })
   };
 };
 

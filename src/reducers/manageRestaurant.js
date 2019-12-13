@@ -14,7 +14,6 @@ export default function manageRestaurants(
       };
 
     case "ADD_REVIEW":
-      console.log(action.review);
       const review = {
         text: action.review.text,
         id: cuidFn(),
@@ -26,11 +25,13 @@ export default function manageRestaurants(
       };
 
     case "DELETE_RESTAURANT":
-      return {
-        restaurants: state.restaurants.filter(
-          restaurant => restaurant.id !== action.payload
-        )
-      };
+      console.log(state.restaurants);
+      console.log(action);
+      // filter out the deleted object, and return the updated state, by using the spread operator
+      const restaurants = state.restaurants.filter(
+        restaurant => restaurant.id !== action.id
+      );
+      return { ...state, restaurants };
 
     default:
       return state;
