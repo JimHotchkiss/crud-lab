@@ -7,6 +7,12 @@ class Reviews extends Component {
     // "This restaurant has these reviews"
     console.log(this.props);
 
+    const restaurantReviews = this.props.reviews.filter(
+      review => review.restaurantId === this.props.restaurantId
+    );
+
+    console.log(restaurantReviews);
+
     return <ul>Reviews</ul>;
   }
 }
