@@ -30,7 +30,7 @@ const mapStateToProps = state => ({
 // map dispatach to props
 const mapDispatchToProps = dispatch => {
   return {
-    addReview: userInput => dispatch({ type: "ADD_REVIEW", payload: userInput })
+    addReview: review => dispatch({ type: "ADD_REVIEW", review })
   };
 };
 

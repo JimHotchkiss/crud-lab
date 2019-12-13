@@ -14,10 +14,11 @@ export default function manageRestaurants(
       };
 
     case "ADD_REVIEW":
+      console.log(action.review);
       const review = {
-        text: action.payload.text,
+        text: action.review.text,
         id: cuidFn(),
-        restaurantId: action.payload.restaurantId
+        restaurantId: action.review.restaurantId
       };
       return {
         ...state,
