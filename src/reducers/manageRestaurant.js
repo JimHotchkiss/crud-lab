@@ -25,13 +25,16 @@ export default function manageRestaurants(
       };
 
     case "DELETE_RESTAURANT":
-      console.log(state.restaurants);
-      console.log(action);
+      // console.log(state.restaurants);
+      // console.log(action);
       // filter out the deleted object, and return the updated state, by using the spread operator
       const restaurants = state.restaurants.filter(
         restaurant => restaurant.id !== action.id
       );
       return { ...state, restaurants };
+    case "DELETE_REVIEW":
+      const reviews = state.reviews.filter(review => review.id !== action.id);
+      return { ...state, reviews };
 
     default:
       return state;

@@ -3,6 +3,7 @@ import Review from "./Review";
 
 class Reviews extends Component {
   render() {
+    console.log(this.props.deleteReview);
     // need to associate restaurantIds with reviews
     // "This restaurant has these reviews"
     //console.log(this.props);
@@ -14,7 +15,14 @@ class Reviews extends Component {
 
     // pass the new array of reviews to Review component
     const reviewList = restaurantReviews.map(review => {
-      return <Review review={review} text={review.text} key={review.id} />;
+      return (
+        <Review
+          review={review}
+          text={review.text}
+          key={review.id}
+          deleteReview={this.props.deleteReview}
+        />
+      );
     });
     //console.log(restaurantReviews);
 

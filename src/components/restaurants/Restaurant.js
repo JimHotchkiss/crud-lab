@@ -3,6 +3,7 @@ import ReviewsContainer from "../../containers/ReviewsContainer";
 
 class Restaurant extends Component {
   handleDelete = () => {
+    console.log("restuarant delete", this.props);
     this.props.deleteRestaurant(this.props.restaurant.id);
   };
   render() {
