@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Review extends Component {
-
   render() {
-    const { review } = this.props
-
+    const { review } = this.props;
     return (
       <div>
-        <li>
-          {review.text}
-        </li>
+        <li>{this.props.text} </li>
         <button> X </button>
       </div>
     );
   }
-
-};
+}
 
 export default Review;

@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import Review from './Review';
+import React, { Component } from "react";
+import Review from "./Review";
 
 class Reviews extends Component {
   render() {
-    return (
-      <ul>
-        Reviews
-      </ul>
-    );
+    // need to associate restaurantIds with reviews
+    // "This restaurant has these reviews"
+    console.log(this.props);
+
+    return <ul>Reviews</ul>;
   }
-};
+}
 
 export default Reviews;
