@@ -3,7 +3,6 @@ import Restaurant from "./Restaurant";
 
 class Restaurants extends Component {
   render() {
-    console.log(restaurants);
     const restaurants = this.props.restaurants.map(restaurant => {
       return (
         <Restaurant
